@@ -9,7 +9,6 @@ export default function Header() {
     { to: '/', label: 'Home', icon: FaHome },
     { to: '/courses', label: 'Courses', icon: FaBook },
     { to: '/blog', label: 'Blog', icon: FaBlog },
-    { to: '/chart', label: 'Chart', icon: FaChartLine },
     { to: '/about', label: 'About', icon: FaInfo },
     { to: '/team', label: 'Team', icon: FaUsers },
     { to: '/contact', label: 'Contact', icon: FaPhone },

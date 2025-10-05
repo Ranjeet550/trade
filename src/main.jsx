@@ -10,7 +10,7 @@ import Blog from './pages/Blog.jsx'
 import About from './pages/About.jsx'
 import Team from './pages/Team.jsx'
 import Contact from './pages/Contact.jsx'
-import Chart from './pages/chart.jsx';
+
 
 const router = createBrowserRouter([
   {
@@ -20,7 +20,7 @@ const router = createBrowserRouter([
       { index: true, element: <Home /> },
   { path: 'courses', element: <Courses /> },
   { path: 'blog', element: <Blog /> },
-  { path: 'chart', element: <Chart /> },
+ 
   { path: 'about', element: <About /> },
   { path: 'team', element: <Team /> },
   { path: 'contact', element: <Contact /> },
