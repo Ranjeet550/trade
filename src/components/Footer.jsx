@@ -5,8 +5,8 @@ export default function Footer() {
   return (
     <footer className="bg-slate-900 text-gray-200 border-t border-slate-800 py-10 mt-16">
       <div className="max-w-6xl mx-auto px-4">
-  <span className="block w-full text-center mb-1 text-xs md:text-sm font-extrabold text-red-500 bg-red-100 rounded-lg px-4 py-2 shadow-sm">
-          Disclaimer: My videos are for educational purposes only and are not intended to be used as financial advice. I cannot guarantee any profit or loss. For any loss or damage caused by my videos, I am not responsible. Please consult your financial advisor before investing.
+  <span className="block w-full text-center mb-3 text-xs md:text-sm font-extrabold text-red-500 bg-white-200 rounded-lg px-4 py-2 shadow-sm">
+          ⚠️Disclaimer:    My videos are for educational purposes only and are not intended to be used as financial advice. I cannot guarantee any profit or loss. For any loss or damage caused by my videos, I am not responsible. Please consult your financial advisor before investing.
         </span>
         <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-10 pb-8 border-b border-slate-800">
           {/* Brand */}

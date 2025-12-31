@@ -13,19 +13,27 @@ export default function Contact() {
     setLoading(true);
     setSuccess(null);
     try {
-      const res = await fetch('http://localhost:5000/send-message', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, message })
-      });
-      if (res.ok) {
-        setSuccess('Message sent successfully!');
-        setName('');
-        setEmail('');
-        setMessage('');
-      } else {
-        setSuccess('Failed to send message. Please try again.');
-      }
+      // Use image-based approach to bypass CORS without page navigation
+      const text = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
+      const url = `https://api.callmebot.com/text.php?source=web&user=@Tradeshai&text=${text}`;
+      
+      // Create a temporary image element to trigger the request
+      const img = new Image();
+      img.src = url;
+      img.style.display = 'none';
+      document.body.appendChild(img);
+      
+      // Clean up after a short delay
+      setTimeout(() => {
+        document.body.removeChild(img);
+      }, 1000);
+      
+      // Show success message
+      setSuccess('Message sent successfully!');
+      setName('');
+      setEmail('');
+      setMessage('');
+      
     } catch {
       setSuccess('Failed to send message. Please try again.');
     }
