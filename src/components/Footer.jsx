@@ -1,16 +1,17 @@
-import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaMapMarkerAlt, FaPhone, FaEnvelope } from 'react-icons/fa';
+import { FaFacebook, FaLinkedin, FaInstagram, FaTelegram, FaMapMarkerAlt, FaPhone, FaEnvelope, FaExclamationTriangle } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
     <footer className="bg-slate-900 text-gray-200 border-t border-slate-800 py-10 mt-16">
       <div className="max-w-6xl mx-auto px-4">
-  <span className="block w-full text-center mb-3 text-xs md:text-sm font-extrabold text-red-500 bg-white-200 rounded-lg px-4 py-2 shadow-sm">
+  <span className="block w-full text-center mb-3 text-xs sm:text-sm font-extrabold text-red-500 bg-white-200 rounded-lg px-4 py-2 shadow-sm">
           ⚠️Disclaimer:    My videos are for educational purposes only and are not intended to be used as financial advice. I cannot guarantee any profit or loss. For any loss or damage caused by my videos, I am not responsible. Please consult your financial advisor before investing.
         </span>
-        <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-10 pb-8 border-b border-slate-800">
+        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-8 pb-8 border-b border-slate-800">
           {/* Brand */}
-          <div>
+          <div className="w-full lg:w-1/3">
             <Link to="/" className="flex items-center gap-3 mb-4">
               <span className="bg-blue-600 text-white w-10 h-10 grid place-items-center rounded-lg font-bold text-lg shadow-lg">T</span>
               <span className="text-xl font-bold tracking-tight text-white">TradeWithShai.K</span>
@@ -24,16 +25,17 @@ export default function Footer() {
               <li className="leading-tight"><span className="text-pink-400">Market Analysis</span></li>
             </ul>
             <div className="flex gap-3 mt-4">
-              <a href="https://www.facebook.com/people/Trade-with-ShaiK/61568387962971/?rdid=dzngqG6r1AioVGAF&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F15uFpdSiaz%2F" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400"><FaFacebook /></a>
-              <a href="https://x.com/Shailes12413904?t=QOA1Jizx1gLviCSg1MZLbw&s=09" target="_blank" rel="noopener noreferrer" className="hover:text-sky-400"><FaTwitter /></a>
-              <a href="https://www.linkedin.com/company/trade-with-shai-k/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400"><FaLinkedin /></a>
-              <a href="https://www.instagram.com/tradewithshai.k/?igsh=N3cxNzhuMTQ5bHR6#" target="_blank" rel="noopener noreferrer" className="hover:text-pink-400"><FaInstagram /></a>
-              <a href="https://www.youtube.com/@tradewithshai.k" target="_blank" rel="noopener noreferrer" className="hover:text-red-500"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5"><path d="M23.498 6.186a2.994 2.994 0 0 0-2.107-2.117C19.228 3.5 12 3.5 12 3.5s-7.228 0-9.391.569A2.994 2.994 0 0 0 .502 6.186C0 8.36 0 12 0 12s0 3.64.502 5.814a2.994 2.994 0 0 0 2.107 2.117C4.772 20.5 12 20.5 12 20.5s7.228 0 9.391-.569a2.994 2.994 0 0 0 2.107-2.117C24 15.64 24 12 24 12s0-3.64-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+              <a href="https://www.facebook.com/people/Trade-with-ShaiK/61568387962971/?rdid=dzngqG6r1AioVGAF&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F15uFpdSiaz%2F" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400"><FaFacebook className="w-6 h-6" /></a>
+              <a href="https://x.com/Shailes12413904?t=QOA1Jizx1gLviCSg1MZLbw&s=09" target="_blank" rel="noopener noreferrer" className="hover:text-sky-400"><FaXTwitter className="w-6 h-6" /></a>
+              <a href="https://www.linkedin.com/company/trade-with-shai-k/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400"><FaLinkedin className="w-6 h-6" /></a>
+              <a href="https://www.instagram.com/tradewithshai.k/?igsh=N3cxNzhuMTQ5bHR6#" target="_blank" rel="noopener noreferrer" className="hover:text-pink-400"><FaInstagram className="w-6 h-6" /></a>
+              <a href="https://www.youtube.com/@tradewithshai.k" target="_blank" rel="noopener noreferrer" className="hover:text-red-500"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6"><path d="M23.498 6.186a2.994 2.994 0 0 0-2.107-2.117C19.228 3.5 12 3.5 12 3.5s-7.228 0-9.391.569A2.994 2.994 0 0 0 .502 6.186C0 8.36 0 12 0 12s0 3.64.502 5.814a2.994 2.994 0 0 0 2.107 2.117C4.772 20.5 12 20.5 12 20.5s7.228 0 9.391-.569a2.994 2.994 0 0 0 2.107-2.117C24 15.64 24 12 24 12s0-3.64-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+              <a href="https://t.me/tradewithshaiK" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400"><FaTelegram className="w-6 h-6" /></a>
             </div>
           </div>
-
+ 
           {/* Quick Links */}
-          <div >
+          <div className="w-full lg:w-1/3">
             <h3 className="text-base font-semibold mb-3 text-white">Quick Links</h3>
             <ul className="space-y-2 text-sm">
               <li><Link to="/" className="transition-colors duration-200 hover:text-blue-400">Home</Link></li>
@@ -42,23 +44,35 @@ export default function Footer() {
               <li><Link to="/contact" className="transition-colors duration-200 hover:text-pink-400">Contact</Link></li>
             </ul>
           </div>
-
+ 
           {/* Contact Info */}
-          <div>
+          <div className="w-full lg:w-1/3">
             <h3 className="text-base font-semibold mb-3 text-white">Contact</h3>
             <ul className="space-y-2 text-sm">
-              <li className="flex items-center gap-2"><FaMapMarkerAlt className="text-blue-400" /> IIIT, Jhalwa, Prayagraj, UP, India</li>
-              <li className="flex items-center gap-2"><FaPhone className="text-green-400" /> +91 (7607941960)</li>
-              <li className="flex items-center gap-2"><FaEnvelope className="text-purple-400" /> businesstradeshai@gmail.com</li>
+              <li className="flex items-start gap-2"><FaMapMarkerAlt className="text-blue-400 mt-1 flex-shrink-0" /> <span className="text-xs sm:text-sm">IIIT, Jhalwa, Prayagraj, UP, India</span></li>
+              <li className="flex items-center gap-2"><FaPhone className="text-green-400" /> <span className="text-xs sm:text-sm">+91 (7607941960)</span></li>
+              <li className="flex items-center gap-2"><FaEnvelope className="text-purple-400" /> <span className="text-xs sm:text-sm">businesstradeshai@gmail.com</span></li>
             </ul>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row justify-between items-center pt-6 text-xs text-gray-500 gap-4">
-          <div>© 2025 TradeWithShai.K. All rights reserved.</div>
-          <div className="flex gap-4">
-            <a href="#" className="hover:text-white">Privacy Policy</a>
-            <a href="#" className="hover:text-white">Terms</a>
-            <a href="#" className="hover:text-white">Disclaimer</a>
+         <div className="w-full border-b-2 border-red-700 py-3 px-2">
+           <div className="flex flex-col gap-2 xs:gap-3 sm:flex-row sm:items-center sm:justify-center sm:gap-4">
+             <div className="flex items-center justify-center gap-2 text-xs xs:text-sm sm:text-base font-bold text-white text-center leading-tight w-full sm:w-auto">
+               <FaExclamationTriangle className="text-yellow-300 min-w-[16px] w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6 flex-shrink-0 animate-pulse" />
+               <span className="text-xs xs:text-sm sm:text-base">Disclaimer: We are not registered with SEBI. Trading involves risk.</span>
+             </div>
+             <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 justify-center items-center">
+               <span className="text-yellow-300 font-bold text-xs xs:text-sm sm:text-base select-all bg-blue-600 px-2 py-1 rounded-md text-center whitespace-nowrap">+91 (7607941960)</span>
+               <span className="text-yellow-300 font-bold text-xs xs:text-sm sm:text-base select-all bg-blue-600 px-2 py-1 rounded-md text-center whitespace-nowrap">businesstradeshai@gmail.com</span>
+             </div>
+           </div>
+         </div>
+        <div className="flex flex-col sm:flex-row justify-between items-center pt-6 text-xs sm:text-sm text-gray-500 gap-4">
+          <div className="text-center sm:text-left">© 2026 TradeWithShai.K. All rights reserved.</div>
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
+            <a href="#" className="hover:text-white whitespace-nowrap">Privacy Policy</a>
+            <a href="#" className="hover:text-white whitespace-nowrap">Terms</a>
+            <a href="#" className="hover:text-white whitespace-nowrap">Disclaimer</a>
           </div>
         </div>
       </div>

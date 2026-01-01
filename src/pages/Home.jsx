@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FaPlayCircle, FaUsers, FaChartLine, FaTrophy, FaHeadset, FaChartBar, FaUserFriends, FaShieldAlt, FaGraduationCap, FaStar, FaCrown } from 'react-icons/fa';
 import NewYearPopup from '../components/Notifications';
 
@@ -14,6 +14,15 @@ function Carousel() {
   const [current, setCurrent] = useState(0);
   const prev = () => setCurrent((c) => (c === 0 ? tradingImages.length - 1 : c - 1));
   const next = () => setCurrent((c) => (c === tradingImages.length - 1 ? 0 : c + 1));
+
+  // Auto-scroll functionality with 2-second delay
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((c) => (c === tradingImages.length - 1 ? 0 : c + 1));
+    }, 2000); // 2 seconds delay
+
+    return () => clearInterval(interval);
+  }, []);
   return (
     <div className="relative w-full flex flex-col items-center">
       <div className="aspect-[4/3] w-full max-w-lg md:max-w-xl lg:max-w-2xl rounded-3xl overflow-hidden shadow-2xl bg-white/10 flex items-center justify-center">
@@ -56,7 +65,8 @@ function Carousel() {
 
 export default function Home() {
   return (
-    <main className="font-sans">
+    <div className="relative">
+      <main className="font-sans">
       <NewYearPopup />
       {/* Hero Section */}
       <section className="relative min-h-[70vh] flex items-center overflow-hidden bg-gradient-to-br from-[#0f2027] via-[#2c5364] to-[#232526] text-white trader-hero-bg">
@@ -82,7 +92,7 @@ export default function Home() {
                 <FaPlayCircle className="text-xl" />
                 Start Trading Journey
               </a>
-              <a href="#consult" className="px-8 py-4 border-2 border-white text-white font-bold rounded-xl hover:bg-white/10 transition-all flex items-center gap-2">
+              <a href="https://wa.me/917607941960" target="_blank" rel="noopener noreferrer" className="px-8 py-4 border-2 border-white text-white font-bold rounded-xl hover:bg-white/10 transition-all flex items-center gap-2">
                 Schedule Consultation
               </a>
             </div>
@@ -183,36 +193,37 @@ export default function Home() {
             <h2 className="text-3xl md:text-5xl font-black mb-4 text-white tracking-tight drop-shadow">Real Traders, Real Success</h2>
             <p className="text-lg text-blue-100/80 max-w-2xl mx-auto">Join thousands of traders who have transformed their financial future with our platform</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { name: 'Akash Kumar', text: 'Transformed my career with detailed courses and supportive community. From beginner to consistent profits in just 6 months!', rating: 5, role: 'Stock Trader', avatar: 'A' },
-              { name: 'Mona', text: 'Hands-on approach and real-time analysis I rely on every day. The mentorship program changed everything for me.', rating: 5, role: 'Forex Trader', avatar: 'M' },
-              { name: 'Hemant Singh', text: 'Top-notch resources and priceless mentorship. The community support is unmatched in the industry.', rating: 5, role: 'Options Trader', avatar: 'H' }
-            ].map((t) => (
-              <div key={t.name} className="relative bg-white/10 rounded-2xl p-10 border border-white/10 hover:bg-white/20 transition-all flex flex-col h-full shadow-xl backdrop-blur-xl group overflow-hidden">
-                {/* Animated Gradient Border */}
-                <div className="absolute inset-0 rounded-2xl pointer-events-none z-0 group-hover:opacity-70 transition-all duration-500">
-                  <div className="w-full h-full animate-gradient-move bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 opacity-20 group-hover:opacity-40 rounded-2xl"></div>
-                </div>
-                <div className="flex items-center mb-4 z-10">
-                  <div className="w-14 h-14 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4 shadow-lg border-2 border-white/20">{t.avatar}</div>
-                  <div>
-                    <h3 className="text-lg font-bold text-white mb-1 drop-shadow">{t.name}</h3>
-                    <p className="text-blue-200 text-xs mb-1">{t.role}</p>
-                    <div className="flex gap-1">
-                      {[...Array(t.rating)].map((_, i) => (
-                        <FaStar key={i} className="text-yellow-400 text-xs" />
-                      ))}
+          <div className="relative w-full overflow-hidden">
+            <div className="flex flex-nowrap gap-6 animate-marquee">
+              {[
+                { name: 'Akash Kumar', text: 'Transformed my career with detailed courses and supportive community. From beginner to consistent profits in just 6 months!', img: '/images/success/akash.jpeg' },
+                { name: 'Manu', text: 'Hands-on approach and real-time analysis I rely on every day. The mentorship program changed everything for me.', img: '/images/success/Manu.jpeg' },
+                { name: 'Hemant Singh', text: 'Top-notch resources and priceless mentorship. The community support is unmatched in the industry.', img: '/images/success/hemant.jpeg' },
+                { name: 'Shekhar ji', text: 'The platform provided me with the tools and knowledge to succeed in trading. Highly recommended!', img: '/images/success/Shekharji.jpeg' },
+                { name: 'Charan', text: 'Excellent mentorship and community support. My trading skills have improved significantly.', img: '/images/success/Charan.jpeg' },
+                { name: 'Bhanu', text: 'The courses are comprehensive and easy to follow. I have gained confidence in my trading decisions.', img: '/images/success/Bhanu.jpeg' }
+              ].map((t) => (
+                <div key={t.name} className="relative bg-white/5 rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all flex flex-col h-full shadow-xl backdrop-blur-2xl group overflow-hidden w-80 flex-shrink-0">
+                  {/* Animated Gradient Border */}
+                  <div className="absolute inset-0 rounded-xl pointer-events-none z-0 group-hover:opacity-70 transition-all duration-500">
+                    <div className="w-full h-full animate-gradient-move bg-gradient-to-br from-cyan-400 via-blue-500 to-indigo-600 opacity-20 group-hover:opacity-40 rounded-xl"></div>
+                  </div>
+                  <div className="flex items-center mb-4 z-10">
+                    <div className="w-14 h-14 rounded-full overflow-hidden mr-4 shadow-lg border-2 border-white/20">
+                      <img src={t.img} alt={t.name} className="w-full h-full object-cover" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-white mb-1 drop-shadow">{t.name}</h3>
                     </div>
                   </div>
+                  <p className="text-blue-100/90 leading-relaxed italic text-base flex-1 z-10 font-medium">"{t.text}"</p>
+                  {/* Decorative floating trading shapes */}
+                  <div className="absolute left-0 bottom-0 w-16 h-16 bg-blue-300/20 rounded-full blur-2xl z-0 animate-float-slow"></div>
+                  <div className="absolute right-0 top-0 w-12 h-12 bg-blue-500/20 rounded-full blur-2xl z-0 animate-float"></div>
+                  <div className="absolute -right-4 bottom-6 w-8 h-8 bg-yellow-200/30 rounded-full blur-xl z-0 animate-float-reverse"></div>
                 </div>
-                <p className="text-blue-100/90 leading-relaxed italic text-base flex-1 z-10">"{t.text}"</p>
-                {/* Decorative floating trading shapes */}
-                <div className="absolute left-0 bottom-0 w-16 h-16 bg-blue-300/20 rounded-full blur-2xl z-0 animate-float-slow"></div>
-                <div className="absolute right-0 top-0 w-12 h-12 bg-blue-500/20 rounded-full blur-2xl z-0 animate-float"></div>
-                <div className="absolute -right-4 bottom-6 w-8 h-8 bg-yellow-200/30 rounded-full blur-xl z-0 animate-float-reverse"></div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
           {/* Call to Action */}
           <div className="text-center mt-12">
@@ -277,19 +288,19 @@ export default function Home() {
       </section>
 
       {/* Call to Action */}
-      <section className="relative py-24 flex items-center overflow-hidden bg-gradient-to-br from-[#0f2027] via-[#00c6ff] to-[#43cea2] text-white trader-cta-bg">
+      <section className="relative py-24 flex items-center overflow-hidden bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#0f3460] text-white trader-cta-bg">
         {/* Decorative SVG for trading theme */}
         <svg className="absolute left-0 top-0 w-full h-full opacity-15 pointer-events-none z-0" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill="#00c6ff" fillOpacity="0.13" d="M0,160L60,170.7C120,181,240,203,360,197.3C480,192,600,160,720,133.3C840,107,960,85,1080,101.3C1200,117,1320,171,1380,197.3L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z" />
+          <path fill="#4a6bff" fillOpacity="0.13" d="M0,160L60,170.7C120,181,240,203,360,197.3C480,192,600,160,720,133.3C840,107,960,85,1080,101.3C1200,117,1320,171,1380,197.3L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z" />
         </svg>
         <svg className="absolute right-0 bottom-0 w-1/2 h-1/2 opacity-10 pointer-events-none z-0" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="200" cy="200" r="200"fill="#00c6ff" fillOpacity="0.10" />
+          <circle cx="200" cy="200" r="200" fill="#4a6bff" fillOpacity="0.10" />
         </svg>
         <div className="max-w-7xl mx-auto px-4 w-full z-10">
           <div className="text-center">
-            <div className="inline-block px-5 py-2 bg-blue-600/20 text-blue-200 font-semibold rounded-full mb-6 tracking-wider shadow">🚀 Start Your Journey Today</div>
-            <h3 className="text-3xl md:text-5xl font-black mb-6 text-white tracking-tight drop-shadow">Ready to Transform <span className="block text-2xl md:text-4xl">Your Trading Career?</span></h3>
-            <p className="text-lg md:text-xl text-blue-100/90 mb-8 max-w-3xl mx-auto">Join over 2,000+ successful traders who have mastered the markets with our proven strategies, expert mentorship, and cutting-edge tools. Your financial freedom starts here.</p>
+            <div className="inline-block px-5 py-2 bg-purple-600/20 text-purple-200 font-bold rounded-full mb-6 tracking-wider shadow-lg">🚀 START YOUR JOURNEY TODAY</div>
+            <h3 className="text-3xl md:text-5xl font-black mb-6 text-white tracking-tight drop-shadow-lg">READY TO TRANSFORM <span className="block text-2xl md:text-4xl">YOUR TRADING CAREER?</span></h3>
+            <p className="text-lg md:text-xl text-purple-100/90 mb-8 max-w-3xl mx-auto font-bold leading-relaxed">Join over <span className="text-yellow-400 font-black text-xl">2,000+</span> successful traders who have mastered the markets with our <span className="text-yellow-400 font-black text-xl">PROVEN STRATEGIES</span>, <span className="text-yellow-400 font-black text-xl">EXPERT MENTORSHIP</span>, and <span className="text-yellow-400 font-black text-xl">CUTTING-EDGE TOOLS</span>. Your financial freedom starts here.</p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10 max-w-3xl mx-auto">
               {[
                 { number: '2,000+', label: 'Active Traders' },
@@ -300,36 +311,77 @@ export default function Home() {
                 <div key={stat.label} className="relative text-center bg-white/10 rounded-xl p-6 shadow-lg border border-white/10 hover:bg-white/20 transition-all backdrop-blur-xl group overflow-hidden">
                   {/* Animated Gradient Border */}
                   <div className="absolute inset-0 rounded-xl pointer-events-none z-0 group-hover:opacity-70 transition-all duration-500">
-                    <div className="w-full h-full animate-gradient-move bg-gradient-to-br from-blue-400 via-cyan-400 to-green-400 opacity-20 group-hover:opacity-40 rounded-xl"></div>
+                    <div className="w-full h-full animate-gradient-move bg-gradient-to-br from-purple-400 via-blue-400 to-cyan-400 opacity-20 group-hover:opacity-40 rounded-xl"></div>
                   </div>
-                  <div className="text-2xl md:text-3xl font-black text-white mb-1 z-10 drop-shadow-lg">{stat.number}</div>
-                  <div className="text-blue-200 text-xs font-medium uppercase tracking-wider z-10">{stat.label}</div>
+                  <div className="text-2xl md:text-3xl font-black text-yellow-400 mb-1 z-10 drop-shadow-lg">{stat.number}</div>
+                  <div className="text-purple-200 text-xs font-bold uppercase tracking-wider z-10">{stat.label}</div>
                 </div>
               ))}
             </div>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <a href="/" className="px-8 py-4 bg-white text-slate-900 font-bold rounded-xl hover:bg-blue-100 transition-all flex items-center gap-2 shadow">
+              <a href="/" className="px-8 py-4 bg-yellow-400 text-slate-900 font-black rounded-xl hover:bg-yellow-300 transition-all flex items-center gap-2 shadow-lg transform hover:scale-105">
                 <FaPlayCircle className="text-xl" />
-                Get Started Now
+                GET STARTED NOW
               </a>
-              <a href="/contact" className="px-8 py-4 border-2 border-white text-white font-bold rounded-xl hover:bg-white/10 transition-all flex items-center gap-2">
+              <a href="https://wa.me/917607941960" target="_blank" rel="noopener noreferrer" className="px-8 py-4 border-2 border-yellow-400 text-yellow-400 font-black rounded-xl hover:bg-yellow-400/10 transition-all flex items-center gap-2">
                 <FaHeadset className="text-xl" />
-                Schedule Consultation
+                SCHEDULE CONSULTATION
               </a>
             </div>
             <div className="mt-10 pt-6 border-t border-white/10">
-              <p className="text-blue-200 text-xs mb-2">Trusted by leading financial institutions</p>
-              <div className="flex justify-center items-center gap-6 opacity-60 text-xs">
-                <div className="font-bold">SECURE</div>
+              <p className="text-purple-200 text-xs mb-2 font-bold uppercase tracking-wider">TRUSTED BY LEADING FINANCIAL INSTITUTIONS</p>
+              <div className="flex justify-center items-center gap-6 opacity-80 text-xs">
+                <div className="font-bold text-yellow-400">✓ SECURE</div>
                 <div className="w-px h-4 bg-white/20"></div>
-                <div className="font-bold">CERTIFIED</div>
+                <div className="font-bold text-yellow-400">✓ CERTIFIED</div>
                 <div className="w-px h-4 bg-white/20"></div>
-                <div className="font-bold">VERIFIED</div>
+                <div className="font-bold text-yellow-400">✓ VERIFIED</div>
               </div>
             </div>
           </div>
         </div>
       </section>
     </main>
+    <ScrollToTopButton />
+    </div>
+  );
+}
+
+// Scroll to Top Button Component
+function ScrollToTopButton() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const toggleVisibility = () => {
+    if (window.pageYOffset > 300) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', toggleVisibility);
+    return () => window.removeEventListener('scroll', toggleVisibility);
+  }, []);
+
+  return (
+    <div className="fixed bottom-8 right-8 z-50">
+      {isVisible && (
+        <button
+          onClick={scrollToTop}
+          className="w-12 h-12 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300"
+          aria-label="Scroll to top"
+        >
+          &#8593;
+        </button>
+      )}
+    </div>
   );
 }

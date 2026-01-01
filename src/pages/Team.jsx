@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Team() {
   const members = [
@@ -40,8 +40,45 @@ export default function Team() {
   ];
 
   const [current, setCurrent] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
   const prev = () => setCurrent((c) => (c === 0 ? members.length - 1 : c - 1));
   const next = () => setCurrent((c) => (c === members.length - 1 ? 0 : c + 1));
+
+  // Auto-scroll functionality
+  useEffect(() => {
+    if (!isAutoPlaying) return;
+
+    const interval = setInterval(() => {
+      setCurrent((c) => (c === members.length - 1 ? 0 : c + 1));
+    }, 2000); // Change slide every 2 seconds (reduced from 4 seconds)
+
+    return () => clearInterval(interval);
+  }, [isAutoPlaying, members.length]);
+
+  // Pause auto-scroll on hover
+  const handleMouseEnter = () => setIsAutoPlaying(false);
+  const handleMouseLeave = () => setIsAutoPlaying(true);
+
+  // Pause auto-scroll when user manually navigates
+  const handleManualNavigation = (index) => {
+    setCurrent(index);
+    setIsAutoPlaying(false);
+    // Resume auto-scroll after 5 seconds of inactivity (reduced from 10 seconds)
+    setTimeout(() => setIsAutoPlaying(true), 5000);
+  };
+
+  const handlePrev = () => {
+    prev();
+    setIsAutoPlaying(false);
+    setTimeout(() => setIsAutoPlaying(true), 5000); // Reduced from 10 seconds
+  };
+
+  const handleNext = () => {
+    next();
+    setIsAutoPlaying(false);
+    setTimeout(() => setIsAutoPlaying(true), 5000); // Reduced from 10 seconds
+  };
 
   return (
     <main className="max-w-7xl mx-auto px-4 py-20 font-sans">
@@ -53,7 +90,11 @@ export default function Team() {
       {/* Carousel */}
       <div className="w-full flex flex-col items-center">
         <div className="relative w-full max-w-6xl mx-auto">
-          <div className="backdrop-blur-2xl bg-white/70 dark:bg-slate-900/70 rounded-[2.5rem] shadow-3xl flex flex-col items-center p-16 text-center transition-all duration-500 hover:scale-[1.03] hover:shadow-4xl ring-1 ring-white/40">
+          <div 
+            className="backdrop-blur-2xl bg-white/70 dark:bg-slate-900/70 rounded-[2.5rem] shadow-3xl flex flex-col items-center p-16 text-center transition-all duration-500 hover:scale-[1.03] hover:shadow-4xl ring-1 ring-white/40"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
             <div className={`relative w-64 h-64 md:w-96 md:h-96 rounded-full bg-gradient-to-br ${members[current].color} flex items-center justify-center mb-10 shadow-2xl overflow-hidden group transition-all duration-500`}> 
               <img src={members[current].image} alt={members[current].name} className="w-60 h-60 md:w-80 md:h-80 object-cover rounded-full border-8 border-white shadow-xl group-hover:scale-105 transition-transform duration-500" />
               <span className="absolute inset-0 rounded-full ring-4 ring-blue-400/30 pointer-events-none"></span>
@@ -61,12 +102,14 @@ export default function Team() {
             <div className="font-bold text-4xl md:text-5xl text-gray-900 mb-3 drop-shadow-lg">{members[current].name}</div>
             <div className="text-blue-600 font-semibold text-2xl mb-5 uppercase tracking-wide drop-shadow">{members[current].role}</div>
             <p className="text-gray-700 text-lg md:text-xl mb-2 max-w-3xl mx-auto italic">{members[current].bio}</p>
+            
+           
           </div>
           {/* Carousel Controls */}
-          <button onClick={prev} className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-blue-600 text-blue-700 hover:text-white rounded-full p-4 shadow-lg transition-all border-2 border-blue-100 hover:border-blue-600" aria-label="Previous" style={{zIndex:2}}>
+          <button onClick={handlePrev} className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-blue-600 text-blue-700 hover:text-white rounded-full p-4 shadow-lg transition-all border-2 border-blue-100 hover:border-blue-600" aria-label="Previous" style={{zIndex:2}}>
             <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" /></svg>
           </button>
-          <button onClick={next} className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-blue-600 text-blue-700 hover:text-white rounded-full p-4 shadow-lg transition-all border-2 border-blue-100 hover:border-blue-600" aria-label="Next" style={{zIndex:2}}>
+          <button onClick={handleNext} className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-blue-600 text-blue-700 hover:text-white rounded-full p-4 shadow-lg transition-all border-2 border-blue-100 hover:border-blue-600" aria-label="Next" style={{zIndex:2}}>
             <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" /></svg>
           </button>
         </div>
@@ -76,7 +119,7 @@ export default function Team() {
             <button
               key={idx}
               className={`w-3.5 h-3.5 rounded-full border-2 border-blue-200 transition-all duration-300 ${current === idx ? 'bg-blue-600 border-blue-600 scale-125' : 'bg-white/70'}`}
-              onClick={() => setCurrent(idx)}
+              onClick={() => handleManualNavigation(idx)}
               aria-label={`Go to member ${idx + 1}`}
             />
           ))}

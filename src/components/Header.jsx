@@ -8,6 +8,7 @@ export default function Header() {
   const navLinks = [
     { to: '/', label: 'Home', icon: FaHome },
     { to: '/courses', label: 'Courses', icon: FaBook },
+    { to: '/trading-results', label: 'Trading Results', icon: FaChartLine },
     { to: '/blog', label: 'Blog', icon: FaBlog },
     { to: '/about', label: 'About', icon: FaInfo },
     { to: '/team', label: 'Team', icon: FaUsers },
@@ -16,15 +17,8 @@ export default function Header() {
 
   return (
     <div className="sticky top-0 z-50">
-      {/* Disclaimer and Contact Bar */}
-      <div className="w-full bg-red-500 border-b-2 border-red-700 text-center py-3 px-2 flex flex-col gap-2 xs:gap-3 sm:flex-row sm:items-center sm:justify-center sm:gap-4">
-        <span className="flex items-center justify-center gap-2 text-xs xs:text-sm sm:text-base font-bold text-white text-center leading-tight flex-nowrap w-full max-w-full overflow-x-auto">
-          <FaExclamationTriangle className="text-yellow-300 min-w-[16px] w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6 flex-shrink-0 animate-pulse" />
-          <span className="whitespace-nowrap"> Disclaimer: We are not registered with SEBI. Trading involves risk.</span>
-        </span>
-  <span className="text-yellow-300 font-bold text-xs xs:text-sm sm:text-base sm:ml-4 mt-1 sm:mt-0 whitespace-nowrap select-all bg-blue-600 px-2 py-1 rounded-md">+91 (7607941960)</span>
-  <span className="text-yellow-300 font-bold text-xs xs:text-sm sm:text-base sm:ml-4 mt-1 sm:mt-0 whitespace-nowrap select-all bg-blue-600 px-2 py-1 rounded-md">businesstradeshai@gmail.com</span>
-      </div>
+     
+     
 
       <header className="bg-white border-b border-gray-200 shadow-sm">
         <div className="max-w-6xl mx-auto flex items-center justify-between py-2 px-2 sm:py-3 sm:px-4">
