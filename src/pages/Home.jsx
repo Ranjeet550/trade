@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { FaPlayCircle, FaUsers, FaChartLine, FaTrophy, FaHeadset, FaChartBar, FaUserFriends, FaShieldAlt, FaGraduationCap, FaStar, FaCrown } from 'react-icons/fa';
-import NewYearPopup from '../components/Notifications';
+// import NewYearPopup from '../components/Notifications';
 
 // Simple Carousel component for trading images
 const tradingImages = [
@@ -67,7 +67,7 @@ export default function Home() {
   return (
     <div className="relative">
       <main className="font-sans">
-      <NewYearPopup />
+      {/* <NewYearPopup /> */}
       {/* Hero Section */}
       <section className="relative min-h-[70vh] flex items-center overflow-hidden bg-gradient-to-br from-[#0f2027] via-[#2c5364] to-[#232526] text-white trader-hero-bg">
         {/* Decorative SVG or shapes for trading theme */}
