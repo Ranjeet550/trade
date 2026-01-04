@@ -12,9 +12,18 @@ export default function Footer() {
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-8 pb-8 border-b border-slate-800">
           {/* Brand */}
           <div className="w-full lg:w-1/3">
-            <Link to="/" className="flex items-center gap-3 mb-4">
-              <span className="bg-blue-600 text-white w-10 h-10 grid place-items-center rounded-lg font-bold text-lg shadow-lg">T</span>
-              <span className="text-xl font-bold tracking-tight text-white">TradeWithShai.K</span>
+            <Link to="/" className="flex items-center gap-4 mb-4">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full blur-sm opacity-75 animate-pulse"></div>
+                <img 
+                  src="/images/Logo/tradewithshai.png" 
+                  alt="TradeWithShai.K Logo" 
+                  className="relative w-20 h-20 rounded-full shadow-2xl object-cover border-2 border-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 p-0.5"
+                />
+              </div>
+              <span className="text-xl font-bold tracking-tight bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                TradeWithShai.K
+              </span>
             </Link>
             <p className="text-gray-400 text-sm max-w-xs mb-2">
               Your trusted platform for professional development and learning excellence. We provide comprehensive trading education and mentorship to help you succeed in the financial markets.

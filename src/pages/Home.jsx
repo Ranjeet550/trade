@@ -115,9 +115,9 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { icon: FaUsers, label: 'Active Traders', value: '2,000+', color: 'from-blue-500 to-cyan-500', desc: 'Traders online now' },
-              { icon: FaChartLine, label: 'Live Volume', value: '₹3.2cr', color: 'from-green-500 to-emerald-500', desc: 'Today’s trades' },
-              { icon: FaTrophy, label: 'Win Rate', value: '89%', color: 'from-purple-500 to-pink-500', desc: 'Profitable trades' },
+              { icon: FaUsers, label: 'Active Traders', value: '500+', color: 'from-blue-500 to-cyan-500', desc: 'Traders online now' },
+              { icon: FaChartLine, label: 'Equity/Share', value: '65%', color: 'from-green-500 to-emerald-500', desc: 'Analysis' },
+              { icon: FaTrophy, label: 'Win Rate', value: '70%', color: 'from-purple-500 to-pink-500', desc: 'Profitable and breakeven' },
               { icon: FaHeadset, label: 'Support', value: '24/7', color: 'from-orange-500 to-red-500', desc: 'Expert help anytime' }
             ].map((i) => (
               <div key={i.label} className="bg-white/10 rounded-2xl p-8 shadow-xl hover:shadow-blue-400/30 border border-white/10 flex flex-col items-center transition-all backdrop-blur-xl">
@@ -300,11 +300,11 @@ export default function Home() {
           <div className="text-center">
             <div className="inline-block px-5 py-2 bg-purple-600/20 text-purple-200 font-bold rounded-full mb-6 tracking-wider shadow-lg">🚀 START YOUR JOURNEY TODAY</div>
             <h3 className="text-3xl md:text-5xl font-black mb-6 text-white tracking-tight drop-shadow-lg">READY TO TRANSFORM <span className="block text-2xl md:text-4xl">YOUR TRADING CAREER?</span></h3>
-            <p className="text-lg md:text-xl text-purple-100/90 mb-8 max-w-3xl mx-auto font-bold leading-relaxed">Join over <span className="text-yellow-400 font-black text-xl">2,000+</span> successful traders who have mastered the markets with our <span className="text-yellow-400 font-black text-xl">PROVEN STRATEGIES</span>, <span className="text-yellow-400 font-black text-xl">EXPERT MENTORSHIP</span>, and <span className="text-yellow-400 font-black text-xl">CUTTING-EDGE TOOLS</span>. Your financial freedom starts here.</p>
+            <p className="text-lg md:text-xl text-purple-100/90 mb-8 max-w-3xl mx-auto font-bold leading-relaxed">Join over <span className="text-yellow-400 font-black text-xl">500+</span> successful traders who have mastered the markets with our <span className="text-yellow-400 font-black text-xl">PROVEN STRATEGIES</span>, <span className="text-yellow-400 font-black text-xl">EXPERT MENTORSHIP</span>, and <span className="text-yellow-400 font-black text-xl">CUTTING-EDGE TOOLS</span>. Your financial freedom starts here.</p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10 max-w-3xl mx-auto">
               {[
-                { number: '2,000+', label: 'Active Traders' },
-                { number: '87%', label: 'Success Rate' },
+                { number: '500+', label: 'Active Traders' },
+                { number: '65%', label: 'Success Rate' },
                 { number: '24/7', label: 'Support' },
                 { number: '50+', label: 'Expert Mentors' }
               ].map((stat) => (

@@ -73,9 +73,9 @@ export default function About() {
 
       {/* Testimonial/Quote Section */}
       <section className="mb-24">
-        <div className="max-w-3xl mx-auto bg-gradient-to-br from-blue-600 via-blue-400 to-purple-500 text-white rounded-3xl shadow-xl p-10 md:p-16 flex flex-col items-center">
+        <div className="max-w-2xl mx-auto bg-gradient-to-br from-blue-700 via-blue-400 to-purple-700 text-white rounded-3xl shadow-xl p-10 md:p-16 flex flex-col items-center">
           <svg className="w-10 h-10 mb-4 opacity-60" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 17v-2a4 4 0 014-4h1V7a4 4 0 00-4-4H7a4 4 0 00-4 4v2a4 4 0 004 4h1v2a4 4 0 01-4 4v2a4 4 0 004 4h2a4 4 0 004-4v-2a4 4 0 00-4-4H9z" /></svg>
-          <p className="text-xl md:text-2xl font-semibold text-center mb-4">“Success in trading is not about luck, but about discipline, learning, and the right mindset. At TradeWithShai.K, we’re here to guide you every step of the way.”</p>
+          <p className="text-xl md:text-2xl font-semibold text-center mb-4">“Success in trading is not about luck, but about discipline, learning, and the right mindset.”</p>
           <div className="font-bold text-lg">Shai.K</div>
           <div className="text-blue-100 text-xs">Founder & Mentor</div>
         </div>

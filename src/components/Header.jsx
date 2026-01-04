@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { FaBars, FaTimes, FaHome, FaBook, FaBlog, FaInfo, FaUsers, FaPhone, FaExclamationTriangle, FaChartLine } from 'react-icons/fa';
+import { FaBars, FaTimes, FaHome, FaBook, FaBlog, FaInfo, FaUsers, FaPhone, FaChartLine } from 'react-icons/fa';
 import { useState } from 'react';
 
 export default function Header() {
@@ -22,8 +22,12 @@ export default function Header() {
 
       <header className="bg-white border-b border-gray-200 shadow-sm">
         <div className="max-w-6xl mx-auto flex items-center justify-between py-2 px-2 sm:py-3 sm:px-4">
-          <Link to="/" className="flex items-center gap-2 font-semibold text-base sm:text-lg min-w-0">
-            <span className="bg-blue-600 text-white w-9 h-9 sm:w-10 sm:h-10 grid place-items-center rounded-lg font-bold text-base sm:text-lg shadow shrink-0">T</span>
+          <Link to="/" className="flex items-center gap-3 font-semibold text-base sm:text-lg min-w-0">
+            <img 
+              src="/images/Logo/tradewithshai.png" 
+              alt="TradeWithShai.K Logo" 
+              className="w-16 h-16 sm:w-20 sm:h-20 rounded-full shadow-lg shrink-0 object-cover border-2 border-blue-200"
+            />
             <span className="text-gray-900 truncate">TradeWithShai.K</span>
           </Link>
 
