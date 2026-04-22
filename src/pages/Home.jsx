@@ -69,22 +69,22 @@ export default function Home() {
       <main className="font-sans">
       {/* <NewYearPopup /> */}
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center overflow-hidden bg-gradient-to-br from-[#0f2027] via-[#2c5364] to-[#232526] text-white trader-hero-bg">
+      <section className="relative min-h-[70vh] flex items-center overflow-hidden bg-gradient-to-b from-white to-slate-50 text-gray-900 trader-hero-bg">
         {/* Decorative SVG or shapes for trading theme */}
-        <svg className="absolute left-0 top-0 w-full h-full opacity-30 pointer-events-none z-0" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className="absolute left-0 top-0 w-full h-full opacity-5 pointer-events-none z-0" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill="#00c6ff" fillOpacity="0.15" d="M0,160L60,170.7C120,181,240,203,360,197.3C480,192,600,160,720,133.3C840,107,960,85,1080,101.3C1200,117,1320,171,1380,197.3L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z" />
         </svg>
-        <svg className="absolute right-0 bottom-0 w-1/2 h-1/2 opacity-20 pointer-events-none z-0" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className="absolute right-0 bottom-0 w-1/2 h-1/2 opacity-3 pointer-events-none z-0" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="200" cy="200" r="200" fill="#00c6ff" fillOpacity="0.10" />
         </svg>
         <div className="max-w-7xl mx-auto px-4 py-20 grid md:grid-cols-2 gap-12 items-center w-full">
           {/* Left: Headline & CTA */}
           <div>
-            <div className="mb-4 inline-block px-4 py-1 bg-white/10 rounded-full text-xs font-semibold border border-white/10">🚀 Professional Trading Platform</div>
-            <h1 className="text-4xl md:text-6xl font-black leading-tight mb-6 bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent">
+            <div className="mb-4 inline-block px-4 py-1 bg-blue-100 rounded-full text-xs font-semibold border border-blue-200 text-blue-700">🚀 Professional Trading Platform</div>
+            <h1 className="text-4xl md:text-6xl font-black leading-tight mb-6 text-gray-900">
               Master the Markets
             </h1>
-            <p className="text-lg md:text-xl text-blue-100/90 mb-8 max-w-xl">
+            <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-xl">
               Transform your trading journey with AI-powered insights, real-time market analysis, and expert mentorship.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -92,7 +92,7 @@ export default function Home() {
                 <FaPlayCircle className="text-xl" />
                 Start Trading Journey
               </a>
-              <a href="https://wa.me/917607941960" target="_blank" rel="noopener noreferrer" className="px-8 py-4 border-2 border-white text-white font-bold rounded-xl hover:bg-white/10 transition-all flex items-center gap-2">
+              <a href="https://wa.me/917607941960" target="_blank" rel="noopener noreferrer" className="px-8 py-3 border-2 border-blue-600 text-blue-600 font-bold rounded-xl hover:bg-blue-50 transition-all duration-300">
                 Schedule Consultation
               </a>
             </div>
@@ -103,15 +103,15 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="relative bg-gradient-to-br from-[#0f2027] via-[#232526] to-[#2c5364] py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-b from-slate-50 to-white py-20 overflow-hidden">
         {/* Decorative SVG for trading theme */}
-        <svg className="absolute left-0 top-0 w-full h-full opacity-10 pointer-events-none z-0" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className="absolute left-0 top-0 w-full h-full opacity-3 pointer-events-none z-0" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill="#00c6ff" fillOpacity="0.18" d="M0,160L60,170.7C120,181,240,203,360,197.3C480,192,600,160,720,133.3C840,107,960,85,1080,101.3C1200,117,1320,171,1380,197.3L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z" />
         </svg>
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-black text-white mb-2 tracking-tight drop-shadow">Market Pulse: Live Trading Stats</h2>
-            <p className="text-lg text-blue-100/90 max-w-2xl mx-auto">Dynamic insights from our thriving trading community</p>
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-2 tracking-tight drop-shadow">Market Pulse: Live Trading Stats</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">Dynamic insights from our thriving trading community</p>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {[
@@ -120,36 +120,36 @@ export default function Home() {
               { icon: FaTrophy, label: 'Win Rate', value: '70%', color: 'from-purple-500 to-pink-500', desc: 'Profitable and breakeven' },
               { icon: FaHeadset, label: 'Support', value: '24/7', color: 'from-orange-500 to-red-500', desc: 'Expert help anytime' }
             ].map((i) => (
-              <div key={i.label} className="bg-white/10 rounded-2xl p-8 shadow-xl hover:shadow-blue-400/30 border border-white/10 flex flex-col items-center transition-all backdrop-blur-xl">
-                <div className={`w-16 h-16 mb-4 rounded-full bg-gradient-to-br ${i.color} flex items-center justify-center shadow-lg border-4 border-white/20`}>
+              <div key={i.label} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl border border-gray-200 flex flex-col items-center transition-all">
+                <div className={`w-16 h-16 mb-4 rounded-full bg-gradient-to-br ${i.color} flex items-center justify-center shadow-lg border-4 border-white`}>
                   <i.icon className="text-3xl text-white drop-shadow" />
                 </div>
-                <div className="text-4xl font-extrabold text-white mb-1 tracking-tight drop-shadow-lg">{i.value}</div>
-                <div className="text-blue-200 font-semibold text-xs uppercase tracking-wider mb-1">{i.label}</div>
-                <div className="text-blue-100/80 text-xs text-center">{i.desc}</div>
+                <div className="text-4xl font-extrabold text-gray-900 mb-1 tracking-tight drop-shadow-lg">{i.value}</div>
+                <div className="text-blue-600 font-semibold text-xs uppercase tracking-wider mb-1">{i.label}</div>
+                <div className="text-gray-600 text-xs text-center">{i.desc}</div>
               </div>
             ))}
           </div>
         </div>
         {/* Animated trading tickers at the bottom */}
         <div className="absolute left-0 right-0 bottom-0 w-full flex justify-center z-20">
-          <marquee behavior="scroll" direction="left" scrollamount="7" className="bg-gradient-to-r from-blue-500 via-cyan-400 to-green-400 text-white text-xs font-mono px-6 py-2 rounded-t-xl shadow-lg whitespace-nowrap">
+          <marquee behavior="scroll" direction="left" scrollamount="7" className="bg-gradient-to-r from-blue-600 to-blue-700 text-white text-xs font-mono px-6 py-2 rounded-t-xl shadow-lg whitespace-nowrap">
             NIFTY 50: <span className="font-bold">+0.85%</span> &nbsp; | &nbsp; BANKNIFTY: <span className="font-bold">+1.12%</span> &nbsp; | &nbsp; SENSEX: <span className="font-bold">+0.67%</span> &nbsp; | &nbsp; USD/INR: <span className="font-bold">83.12</span> &nbsp; | &nbsp; GOLD: <span className="font-bold">₹59,800</span> &nbsp; | &nbsp; SILVER: <span className="font-bold">₹72,300</span> &nbsp; | &nbsp; RELIANCE: <span className="font-bold">₹2,650</span> &nbsp; | &nbsp; TCS: <span className="font-bold">₹3,550</span> &nbsp; | &nbsp; HDFC BANK: <span className="font-bold">₹1,520</span> &nbsp; | &nbsp; INFY: <span className="font-bold">₹1,420</span> &nbsp; | &nbsp; CRUDE OIL: <span className="font-bold">₹6,800</span> &nbsp; | &nbsp; NIFTY IT: <span className="font-bold">+1.05%</span> &nbsp; | &nbsp; NIFTY FMCG: <span className="font-bold">+0.45%</span>
           </marquee>
         </div>
       </section>
 
       {/* Why Trade With Us */}
-      <section className="relative py-24 bg-gradient-to-br from-[#232526] via-[#0f2027] to-[#2c5364] overflow-hidden">
+      <section className="relative py-24 bg-gradient-to-b from-white to-slate-50 overflow-hidden">
         {/* Decorative SVG for trading theme */}
-        <svg className="absolute left-0 top-0 w-full h-full opacity-10 pointer-events-none z-0" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className="absolute left-0 top-0 w-full h-full opacity-3 pointer-events-none z-0" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill="#00c6ff" fillOpacity="0.13" d="M0,160L60,170.7C120,181,240,203,360,197.3C480,192,600,160,720,133.3C840,107,960,85,1080,101.3C1200,117,1320,171,1380,197.3L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z" />
         </svg>
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
-            <div className="inline-block px-5 py-2 bg-blue-600/20 text-blue-200 font-semibold rounded-full mb-4 tracking-wider shadow">✨ Why Choose Us</div>
-            <h2 className="text-3xl md:text-5xl font-black text-white mb-4 tracking-tight drop-shadow">Why Trade With Us</h2>
-            <p className="text-lg text-blue-100/90 max-w-2xl mx-auto">Discover the trading advantages that set us apart in the Indian markets</p>
+            <div className="inline-block px-5 py-2 bg-blue-100 text-blue-700 font-semibold rounded-full mb-4 tracking-wider shadow border border-blue-200">✨ Why Choose Us</div>
+            <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-4 tracking-tight drop-shadow">Why Trade With Us</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">Discover the trading advantages that set us apart in the Indian markets</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
@@ -158,16 +158,16 @@ export default function Home() {
               { icon: FaUserFriends, title: 'Trading Community', desc: 'Network with 2,000+ active traders, share strategies & wins', color: 'from-purple-500 to-pink-500' },
               { icon: FaShieldAlt, title: 'Risk Management', desc: 'Smart stop-loss, capital protection, and portfolio insights', color: 'from-orange-500 to-red-500' }
             ].map((f) => (
-              <div key={f.title} className="relative bg-white/10 rounded-2xl p-10 shadow-xl hover:shadow-blue-400/30 border border-white/10 flex flex-col items-center transition-all backdrop-blur-xl group overflow-hidden">
+              <div key={f.title} className="relative bg-white rounded-2xl p-10 shadow-lg hover:shadow-xl border border-gray-200 flex flex-col items-center transition-all group overflow-hidden">
                 {/* Animated Gradient Border */}
                 <div className={`absolute inset-0 rounded-2xl pointer-events-none z-0 group-hover:opacity-70 transition-all duration-500`}> 
                   <div className={`w-full h-full animate-gradient-move bg-gradient-to-br ${f.color} opacity-20 group-hover:opacity-40 rounded-2xl`}></div>
                 </div>
-                <div className={`w-16 h-16 mb-4 rounded-xl bg-gradient-to-br ${f.color} flex items-center justify-center shadow-lg border-4 border-white/20 z-10`}>
+                <div className={`w-16 h-16 mb-4 rounded-xl bg-gradient-to-br ${f.color} flex items-center justify-center shadow-lg border-4 border-white z-10`}>
                   <f.icon className="text-3xl text-white drop-shadow" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2 z-10 drop-shadow-lg">{f.title}</h3>
-                <p className="text-blue-100/90 text-center z-10">{f.desc}</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-2 z-10 drop-shadow-lg">{f.title}</h3>
+                <p className="text-gray-600 text-center z-10">{f.desc}</p>
                 {/* Decorative floating trading shapes */}
                 <div className="absolute left-0 bottom-0 w-20 h-20 bg-blue-300/20 rounded-full blur-2xl z-0 animate-float-slow"></div>
                 <div className="absolute right-0 top-0 w-16 h-16 bg-blue-500/20 rounded-full blur-2xl z-0 animate-float"></div>
@@ -179,19 +179,19 @@ export default function Home() {
       </section>
 
       {/* Success Stories */}
-      <section className="relative py-24 flex items-center overflow-hidden bg-gradient-to-br from-[#232526] via-[#0f2027] to-[#2c5364] text-white trader-success-bg">
+      <section className="relative py-24 flex items-center overflow-hidden bg-gradient-to-b from-slate-50 to-white text-gray-900 trader-success-bg">
         {/* Decorative SVG for trading theme */}
-        <svg className="absolute left-0 top-0 w-full h-full opacity-15 pointer-events-none z-0" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className="absolute left-0 top-0 w-full h-full opacity-3 pointer-events-none z-0" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill="#00c6ff" fillOpacity="0.13" d="M0,160L60,170.7C120,181,240,203,360,197.3C480,192,600,160,720,133.3C840,107,960,85,1080,101.3C1200,117,1320,171,1380,197.3L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z" />
         </svg>
-        <svg className="absolute right-0 bottom-0 w-1/2 h-1/2 opacity-10 pointer-events-none z-0" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className="absolute right-0 bottom-0 w-1/2 h-1/2 opacity-2 pointer-events-none z-0" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="200" cy="200" r="200" fill="#00c6ff" fillOpacity="0.10" />
         </svg>
         <div className="max-w-7xl mx-auto px-4 w-full z-10">
           <div className="text-center mb-16">
-            <div className="inline-block px-5 py-2 bg-blue-600/20 text-blue-200 font-semibold rounded-full mb-4 tracking-wider shadow">🌟 Success Stories</div>
-            <h2 className="text-3xl md:text-5xl font-black mb-4 text-white tracking-tight drop-shadow">Real Traders, Real Success</h2>
-            <p className="text-lg text-blue-100/80 max-w-2xl mx-auto">Join thousands of traders who have transformed their financial future with our platform</p>
+            <div className="inline-block px-5 py-2 bg-blue-100 text-blue-700 font-semibold rounded-full mb-4 tracking-wider shadow border border-blue-200">🌟 Success Stories</div>
+            <h2 className="text-3xl md:text-5xl font-black mb-4 text-gray-900 tracking-tight drop-shadow">Real Traders, Real Success</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">Join thousands of traders who have transformed their financial future with our platform</p>
           </div>
           <div className="relative w-full overflow-hidden">
             <div className="flex flex-nowrap gap-6 animate-marquee">
@@ -203,7 +203,7 @@ export default function Home() {
                 { name: 'Charan', text: 'Excellent mentorship and community support. My trading skills have improved significantly.', img: '/images/success/Charan.jpeg' },
                 { name: 'Bhanu', text: 'The courses are comprehensive and easy to follow. I have gained confidence in my trading decisions.', img: '/images/success/Bhanu.jpeg' }
               ].map((t) => (
-                <div key={t.name} className="relative bg-white/5 rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all flex flex-col h-full shadow-xl backdrop-blur-2xl group overflow-hidden w-80 flex-shrink-0">
+                <div key={t.name} className="relative bg-white rounded-xl p-6 border border-gray-200 hover:bg-gray-50 transition-all flex flex-col h-full shadow-lg group overflow-hidden w-80 flex-shrink-0">
                   {/* Animated Gradient Border */}
                   <div className="absolute inset-0 rounded-xl pointer-events-none z-0 group-hover:opacity-70 transition-all duration-500">
                     <div className="w-full h-full animate-gradient-move bg-gradient-to-br from-cyan-400 via-blue-500 to-indigo-600 opacity-20 group-hover:opacity-40 rounded-xl"></div>
@@ -213,10 +213,10 @@ export default function Home() {
                       <img src={t.img} alt={t.name} className="w-full h-full object-cover" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-white mb-1 drop-shadow">{t.name}</h3>
+                      <h3 className="text-lg font-bold text-gray-900 mb-1 drop-shadow">{t.name}</h3>
                     </div>
                   </div>
-                  <p className="text-blue-100/90 leading-relaxed italic text-base flex-1 z-10 font-medium">"{t.text}"</p>
+                  <p className="text-gray-700 leading-relaxed italic text-base flex-1 z-10 font-medium">"{t.text}"</p>
                   {/* Decorative floating trading shapes */}
                   <div className="absolute left-0 bottom-0 w-16 h-16 bg-blue-300/20 rounded-full blur-2xl z-0 animate-float-slow"></div>
                   <div className="absolute right-0 top-0 w-12 h-12 bg-blue-500/20 rounded-full blur-2xl z-0 animate-float"></div>
@@ -227,7 +227,7 @@ export default function Home() {
           </div>
           {/* Call to Action */}
           <div className="text-center mt-12">
-            <p className="text-blue-200 mb-4 text-base">Ready to join our success stories?</p>
+            <p className="text-gray-600 mb-4 text-base">Ready to join our success stories?</p>
             <a href="/courses" className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all shadow hover:shadow-lg">
               <FaPlayCircle className="text-lg" />
               Start Your Journey
@@ -237,16 +237,16 @@ export default function Home() {
       </section>
 
       {/* Premium Trading Courses */}
-      <section className="relative py-24 bg-gradient-to-br from-[#0f2027] via-[#232526] to-[#2c5364] overflow-hidden">
+      <section className="relative py-24 bg-gradient-to-b from-white to-slate-50 overflow-hidden">
         {/* Decorative SVG for trading theme */}
-        <svg className="absolute left-0 top-0 w-full h-full opacity-10 pointer-events-none z-0" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className="absolute left-0 top-0 w-full h-full opacity-3 pointer-events-none z-0" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill="#00c6ff" fillOpacity="0.13" d="M0,160L60,170.7C120,181,240,203,360,197.3C480,192,600,160,720,133.3C840,107,960,85,1080,101.3C1200,117,1320,171,1380,197.3L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z" />
         </svg>
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
-            <div className="inline-block px-5 py-2 bg-blue-600/20 text-blue-200 font-semibold rounded-full mb-4 tracking-wider shadow">🎓 Expert-Led Courses</div>
-            <h2 className="text-3xl md:text-5xl font-black text-white mb-4 tracking-tight drop-shadow">Premium Trading Courses</h2>
-            <p className="text-lg text-blue-100/90 max-w-2xl mx-auto">Master the markets with our comprehensive, industry-leading courses designed by professional traders</p>
+            <div className="inline-block px-5 py-2 bg-blue-100 text-blue-700 font-semibold rounded-full mb-4 tracking-wider shadow border border-blue-200">🎓 Expert-Led Courses</div>
+            <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-4 tracking-tight drop-shadow">Premium Trading Courses</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">Master the markets with our comprehensive, industry-leading courses designed by professional traders</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {[
@@ -256,7 +256,7 @@ export default function Home() {
             ].map((c) => (
               <div
                 key={c.title}
-                className="group relative bg-white/10 rounded-3xl shadow-2xl border border-white/10 flex flex-col items-center justify-center transition-all hover:-translate-y-3 hover:shadow-blue-300/70 hover:scale-105 duration-300 overflow-hidden p-0 backdrop-blur-xl"
+                className="group relative bg-white/40 backdrop-blur-md rounded-3xl shadow-lg border border-white/60 flex flex-col items-center justify-center transition-all hover:-translate-y-3 hover:shadow-xl hover:scale-105 duration-300 overflow-hidden p-0 hover:bg-white/50"
               >
                 {/* Animated Gradient Border */}
                 <div className="absolute inset-0 rounded-3xl pointer-events-none z-0">
@@ -276,7 +276,7 @@ export default function Home() {
                   </div>
                 </div>
                 {/* Title */}
-                <h3 className="text-2xl font-extrabold text-white my-10 text-center z-10 drop-shadow-lg tracking-tight px-6 group-hover:text-blue-300 transition-colors duration-300">{c.title}</h3>
+                <h3 className="text-2xl font-extrabold text-gray-900 my-10 text-center z-10 drop-shadow-lg tracking-tight px-6 group-hover:text-blue-600 transition-colors duration-300">{c.title}</h3>
                 {/* Decorative floating shapes */}
                 <div className="absolute left-0 bottom-0 w-36 h-36 bg-blue-300/30 rounded-full blur-2xl z-0 animate-float-slow"></div>
                 <div className="absolute right-0 top-0 w-28 h-28 bg-blue-500/20 rounded-full blur-2xl z-0 animate-float"></div>
@@ -288,19 +288,19 @@ export default function Home() {
       </section>
 
       {/* Call to Action */}
-      <section className="relative py-24 flex items-center overflow-hidden bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#0f3460] text-white trader-cta-bg">
+      <section className="relative py-24 flex items-center overflow-hidden bg-gradient-to-b from-slate-50 to-white text-gray-900 trader-cta-bg">
         {/* Decorative SVG for trading theme */}
-        <svg className="absolute left-0 top-0 w-full h-full opacity-15 pointer-events-none z-0" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className="absolute left-0 top-0 w-full h-full opacity-3 pointer-events-none z-0" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill="#4a6bff" fillOpacity="0.13" d="M0,160L60,170.7C120,181,240,203,360,197.3C480,192,600,160,720,133.3C840,107,960,85,1080,101.3C1200,117,1320,171,1380,197.3L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z" />
         </svg>
-        <svg className="absolute right-0 bottom-0 w-1/2 h-1/2 opacity-10 pointer-events-none z-0" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className="absolute right-0 bottom-0 w-1/2 h-1/2 opacity-2 pointer-events-none z-0" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="200" cy="200" r="200" fill="#4a6bff" fillOpacity="0.10" />
         </svg>
         <div className="max-w-7xl mx-auto px-4 w-full z-10">
           <div className="text-center">
-            <div className="inline-block px-5 py-2 bg-purple-600/20 text-purple-200 font-bold rounded-full mb-6 tracking-wider shadow-lg">🚀 START YOUR JOURNEY TODAY</div>
-            <h3 className="text-3xl md:text-5xl font-black mb-6 text-white tracking-tight drop-shadow-lg">READY TO TRANSFORM <span className="block text-2xl md:text-4xl">YOUR TRADING CAREER?</span></h3>
-            <p className="text-lg md:text-xl text-purple-100/90 mb-8 max-w-3xl mx-auto font-bold leading-relaxed">Join over <span className="text-yellow-400 font-black text-xl">500+</span> successful traders who have mastered the markets with our <span className="text-yellow-400 font-black text-xl">PROVEN STRATEGIES</span>, <span className="text-yellow-400 font-black text-xl">EXPERT MENTORSHIP</span>, and <span className="text-yellow-400 font-black text-xl">CUTTING-EDGE TOOLS</span>. Your financial freedom starts here.</p>
+            <div className="inline-block px-5 py-2 bg-blue-100 text-blue-700 font-bold rounded-full mb-6 tracking-wider shadow-lg border border-blue-200">🚀 START YOUR JOURNEY TODAY</div>
+            <h3 className="text-3xl md:text-5xl font-black mb-6 text-gray-900 tracking-tight drop-shadow-lg">READY TO TRANSFORM <span className="block text-2xl md:text-4xl">YOUR TRADING CAREER?</span></h3>
+            <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-3xl mx-auto font-bold leading-relaxed">Join over <span className="text-blue-600 font-black text-xl">500+</span> successful traders who have mastered the markets with our <span className="text-blue-600 font-black text-xl">PROVEN STRATEGIES</span>, <span className="text-blue-600 font-black text-xl">EXPERT MENTORSHIP</span>, and <span className="text-blue-600 font-black text-xl">CUTTING-EDGE TOOLS</span>. Your financial freedom starts here.</p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10 max-w-3xl mx-auto">
               {[
                 { number: '500+', label: 'Active Traders' },
@@ -308,34 +308,34 @@ export default function Home() {
                 { number: '24/7', label: 'Support' },
                 { number: '50+', label: 'Expert Mentors' }
               ].map((stat) => (
-                <div key={stat.label} className="relative text-center bg-white/10 rounded-xl p-6 shadow-lg border border-white/10 hover:bg-white/20 transition-all backdrop-blur-xl group overflow-hidden">
+                <div key={stat.label} className="relative text-center bg-white rounded-xl p-6 shadow-lg border border-gray-200 hover:bg-gray-50 transition-all group overflow-hidden">
                   {/* Animated Gradient Border */}
                   <div className="absolute inset-0 rounded-xl pointer-events-none z-0 group-hover:opacity-70 transition-all duration-500">
                     <div className="w-full h-full animate-gradient-move bg-gradient-to-br from-purple-400 via-blue-400 to-cyan-400 opacity-20 group-hover:opacity-40 rounded-xl"></div>
                   </div>
-                  <div className="text-2xl md:text-3xl font-black text-yellow-400 mb-1 z-10 drop-shadow-lg">{stat.number}</div>
-                  <div className="text-purple-200 text-xs font-bold uppercase tracking-wider z-10">{stat.label}</div>
+                  <div className="text-2xl md:text-3xl font-black text-blue-600 mb-1 z-10 drop-shadow-lg">{stat.number}</div>
+                  <div className="text-gray-600 text-xs font-bold uppercase tracking-wider z-10">{stat.label}</div>
                 </div>
               ))}
             </div>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <a href="/" className="px-8 py-4 bg-yellow-400 text-slate-900 font-black rounded-xl hover:bg-yellow-300 transition-all flex items-center gap-2 shadow-lg transform hover:scale-105">
+              <a href="/" className="px-8 py-4 bg-blue-600 text-white font-black rounded-xl hover:bg-blue-700 transition-all flex items-center gap-2 shadow-lg transform hover:scale-105">
                 <FaPlayCircle className="text-xl" />
                 GET STARTED NOW
               </a>
-              <a href="https://wa.me/917607941960" target="_blank" rel="noopener noreferrer" className="px-8 py-4 border-2 border-yellow-400 text-yellow-400 font-black rounded-xl hover:bg-yellow-400/10 transition-all flex items-center gap-2">
+              <a href="https://wa.me/917607941960" target="_blank" rel="noopener noreferrer" className="px-8 py-4 border-2 border-blue-600 text-blue-600 font-black rounded-xl hover:bg-blue-50 transition-all flex items-center gap-2">
                 <FaHeadset className="text-xl" />
                 SCHEDULE CONSULTATION
               </a>
             </div>
-            <div className="mt-10 pt-6 border-t border-white/10">
-              <p className="text-purple-200 text-xs mb-2 font-bold uppercase tracking-wider">TRUSTED BY LEADING FINANCIAL INSTITUTIONS</p>
+            <div className="mt-10 pt-6 border-t border-gray-300">
+              <p className="text-gray-600 text-xs mb-2 font-bold uppercase tracking-wider">TRUSTED BY LEADING FINANCIAL INSTITUTIONS</p>
               <div className="flex justify-center items-center gap-6 opacity-80 text-xs">
-                <div className="font-bold text-yellow-400">✓ SECURE</div>
-                <div className="w-px h-4 bg-white/20"></div>
-                <div className="font-bold text-yellow-400">✓ CERTIFIED</div>
-                <div className="w-px h-4 bg-white/20"></div>
-                <div className="font-bold text-yellow-400">✓ VERIFIED</div>
+                <div className="font-bold text-blue-600">✓ SECURE</div>
+                <div className="w-px h-4 bg-gray-300"></div>
+                <div className="font-bold text-blue-600">✓ CERTIFIED</div>
+                <div className="w-px h-4 bg-gray-300"></div>
+                <div className="font-bold text-blue-600">✓ VERIFIED</div>
               </div>
             </div>
           </div>
